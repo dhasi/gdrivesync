@@ -46,6 +46,10 @@ namespace GDriveSync.Client
                 .ImplementedBy<Messenger>());
 
             _container.Register(Component
+                .For<IViewModelLocator>()
+                .AsFactory());
+
+            _container.Register(Component
                 .For<IViewLocator>()
                 .ImplementedBy<ViewLocator>());
             

@@ -54,6 +54,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.4.1.27.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
@@ -77,11 +78,16 @@
     <Compile Include="ApplicationStartup.cs" />
     <Compile Include="Common\ViewManager.cs" />
     <Compile Include="Messaging\ShowViewMessage.cs" />
+    <Compile Include="ViewModels\GDriveContentViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocatorcs.cs" />
+    <Compile Include="Views\ContentComparisonView.xaml.cs">
+      <DependentUpon>ContentComparisonView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IView.cs" />
     <Compile Include="Views\SelectTargetView.xaml.cs">
       <DependentUpon>SelectTargetView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewLocator.cs" />
+    <Compile Include="Views\ViewLocator.cs" />
     <Compile Include="ViewModels\FolderViewModel.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -98,6 +104,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\ContentComparisonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SelectTargetView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,6 +144,24 @@
       <Project>{dfc3608d-e41d-47e7-84d0-70fd5275051e}</Project>
       <Name>GDriveSync.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Blue.png" />
+    <Resource Include="Images\BlueLarge.png" />
+    <Resource Include="Images\Brown.png" />
+    <Resource Include="Images\BrownLarge.png" />
+    <Resource Include="Images\Gray.png" />
+    <Resource Include="Images\GrayLarge.png" />
+    <Resource Include="Images\Green.png" />
+    <Resource Include="Images\GreenLarge.png" />
+    <Resource Include="Images\Orange.png" />
+    <Resource Include="Images\OrangeLarge.png" />
+    <Resource Include="Images\Pink.png" />
+    <Resource Include="Images\PinkLarge.png" />
+    <Resource Include="Images\Red.png" />
+    <Resource Include="Images\RedLarge.png" />
+    <Resource Include="Images\Yellow.png" />
+    <Resource Include="Images\YellowLarge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

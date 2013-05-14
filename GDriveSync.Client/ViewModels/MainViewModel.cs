@@ -6,13 +6,16 @@ namespace GDriveSync.Client
 {
     public class MainViewModel : ViewModelBase, IViewModel
     {
-        private readonly IViewManager _viewManager;
+        private readonly IViewModelLocator _locator;
 
-        public MainViewModel(IMessenger messenger, IViewManager viewManager)
+        public GDriveContentViewModel GDrive { get; set; }
+
+        public MainViewModel(IMessenger messenger, IViewModelLocator locator)
             : base(messenger)
         {
             InitializeCommands();
-            _viewManager = viewManager;
+            _locator = locator;
+            GDrive = _locator.Locate<GDriveContentViewModel>();
         }
 
         #region Methods

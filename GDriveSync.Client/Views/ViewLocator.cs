@@ -32,7 +32,7 @@ namespace GDriveSync.Client
                 if (ctor != null)
                 {
                     //TODO: catch result in dictionary for next locate.
-                    view = _container.Resolve(type) as IView;
+                    view = _container.Resolve(type, new { context }) as IView;
                     break;
                 }
             }
